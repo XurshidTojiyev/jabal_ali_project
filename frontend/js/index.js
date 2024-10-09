@@ -8,7 +8,7 @@ $(document).ready(function() {
             $.each(data, (index, element) => {
 
                 output += `
-                <div data-id="${element['id']}" class="card">
+                <div data-id="${element['id']}" id='${element['description']}' class="card">
                     <img class='img' src="./images/${element['img']}" alt="">
                     <span>${element['title']}</span>
                     <div class="ctr-price">
@@ -38,7 +38,7 @@ $(".btn-all").click(function() {
             $.each(data, (index, element) => {
 
                 output += `
-                <div class="card" cata-id="${element['id']}">
+                <div class="card" cata-id="${element['id']} id='${element['description']}'">
                     <img class='img' src="./images/${element['img']}" alt="">
                     <span>${element['title']}</span>
                     <div class="ctr-price">
@@ -65,7 +65,7 @@ $(".btn_1").click(() => {
             var output = "";
             $.each(data, (index, element) => {
                 output += `
-                <div data-id=" ${element['id']}" class="card">
+                <div data-id=" ${element['id']}" id='${element['description']}' class="card">
                     <img class='img' src="./images/${element['img']}" alt="">
                     <span>${element['title']}</span>
                     <div class="ctr-price">
@@ -145,18 +145,31 @@ $(".buyurtma_btn__btn").click(() => {
         
 })
 
-// document.body.onclick = (e) => {
-//     if(e.target.classList == 'img') {
-//         $(e.target).css('width', '300px')
-//         $(e.target).css('height', '200px')
-//         $(e.target).css('margin-left', '30px');
-//         $(e.target.parentElement).css('height', '70vh')
-//         $(e.target.parentElement).css('width', '100%');
-//         $(e.target.nextElementSibling).css('display', 'none')
-//         $(e.target.nextElementSibling.nextElementSibling).css('display', 'none')
-//         $(e.target.previousElementSibling).css('margin-right', '150px');
-//         $(e.target.parentElement).css('margin-left', '0px')
-//         $(e.target.parentElement).css('position', 'absolute')
-//         $(e.target.parentElement).css('transition', '3s');
-//     }   
-// }
+$(document.body).click((e) => {
+    
+    if(e.target.classList[0] == 'img') {
+        var target = e.target;
+        if(target.getAttribute('src')) {
+            $('.popup_img').attr('src', target.getAttribute('src'));
+        }
+        var description = target.parentElement.getAttribute('id');
+        console.log(description);
+        
+        $('.about_product').html(description);
+        $('.popup_span').html(e.target.nextElementSibling);
+        $('.d-none').css('display', 'block');
+        $('.cards').css('display', 'none');
+        var chldrn = target.nextElementSibling.children[0];
+        
+        
+        $('.popup_price').html(chldrn)
+        // $('.popup').css('display', 'block');
+        // $('.popup').css('opacity')
+        $('.popup').css('margin-top', `250px`);
+        $('.popup').css('margin-left', '30px');;
+    }
+})
+
+$('#exit').click(() => {
+    window.location.reload()
+})

@@ -13,7 +13,7 @@
 		// Node/CommonJS
 		module.exports = factory(require('jquery'));
 	} else {
-		// Browser globals
+		// Browser obals
 		factory(jQuery);
 	}
 }(function ($) {

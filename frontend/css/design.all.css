@@ -20,6 +20,7 @@
 .all .container .block {
     background-color: white;
      /* height: 100%; */
+     position: relative;
      /* border-top-left-radius: 40px; */
      /* border-top-right-radius: 40px; */
 }
@@ -69,11 +70,21 @@
     /* border-top: solid 10px  black; */
     border-radius: 12px;
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     width: 85%;
     /* margin-top: 20px; */
     margin: 20px auto;
 }
+
+/* .card1 {
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 85%;
+    /* margin-top: 20px; */
+    /* margin: 20px auto; */
+/* } */
 
 .all .container .block .cards .category {
     font-family: 'Roboto';
@@ -84,7 +95,11 @@
 
 
 
-.all .container .block .cards .card img {
+.card img {
+    z-index: 0;
+}
+
+.card img, .card1 img {
     width: 100%;
     height: 200px;
     margin: 0 auto;
@@ -92,14 +107,22 @@
     border-radius: 10px;
 }
 
-.all .container .block .cards .card span {
+ .card span {
     color: rgb(4, 2, 11);
     margin: 15px;
     font-family: 'Roboto';
     font-size: 30px;
 }
 
-.all .container .block .cards .card .ctr-price {
+.card1 span {
+    color: rgb(4, 2, 11);
+    margin-left: 10.3px;;
+    font-family: 'Roboto';
+    font-size: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.card .ctr-price {
     display: flex;
     margin: 15px;
     width: 95%;
@@ -107,7 +130,7 @@
     justify-content: space-between;
 }
 
-.all .container .block .cards .card .ctr-price .cntr {
+.card .ctr-price .cntr {
     display: flex;
     justify-content: space-around;
     width: 45%;
@@ -115,11 +138,11 @@
     align-items: center;
 }
 
-.all .container .block .cards .card .ctr-price .cntr p{
+.card .ctr-price .cntr p{
     font-size: 20px;
 }
 
-.all .container .block .cards .ctr-price .cntr .incr {
+.ctr-price .cntr .incr {
     background-color: #1E201E;
     border-radius: 7px;
     padding: 5px;;
@@ -131,12 +154,12 @@
     /* z-index: 5000; */
 }
 
-.all .container .block .cards .ctr-price .cntr .incr:active {
+.ctr-price .cntr .incr:active {
     background-color: rgb(4, 2, 11);
     /* padding: 10.9px 18.9px; */
 }
 
-.all .container .block .cards .ctr-price .cntr .decr {
+.ctr-price .cntr .decr {
     background-color: #1E201E;
     border: none;
     /* border-radius: 50px; */
@@ -149,17 +172,17 @@
 } 
 
 
-.all .container .block .cards .ctr-price .cntr .decr:active {
+.ctr-price .cntr .decr:active {
     background-color: rgb(4, 2, 11);
     /* padding: 11px px; */
 }
 
-.all .container .block .cards .card .ctr-price p{
+.card .ctr-price p{
     color: rgb(4, 2, 11);
     font-family: 'Roboto';
 }
 
-.all .container .block .cards .card .ctr-price {
+.card .ctr-price {
     height: 20px;
     align-items: center;
 }
@@ -249,4 +272,73 @@
     justify-content: center;
     display: flex;
     align-items: center;
+}
+
+.block .popup {
+    /* border: solid 1px black; */
+    height: 60vh;
+    width: 85%;
+    border-radius: 30px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about_product {
+    width: 290px;
+    margin-left: 22px;
+    margin-top: 10px;
+}
+
+/* .popup_img {
+    margin-top: 300px;
+} */
+
+.d-none {
+    display: none;
+}
+
+.popup .card1 .ctr-price {
+    margin-left: 22px;
+}
+
+.card1 .ctr-price {
+    margin-left: 15px;
+    margin-top: 10px;;
+}
+
+.card1 img{
+    position: relative;
+}
+
+.exit-block {
+    position: absolute;
+    z-index: 50000;
+    width: 20%;
+    /* border: solid 1px white; */
+    width: 93%;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.exit {
+    /* margin-left: 100px; */
+    color: white;
+    cursor: pointer;
+    /* float: right; */
+    font-size: 30px;
+    margin-top: 10px;
+    /* border: solid 1px white; */
+}
+
+.popup {
+    margin-top: 300px;
+    position: absolute;
+    /* z-index: 50000; */
+}
+
+.card1 img {
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 20px;
 }
