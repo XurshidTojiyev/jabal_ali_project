@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .all {
+        width: 25%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .buyurtma-btn {
+        /* border: solid 1px black; */
+        /* height: 100vh; */
+        width: 100%;
+    }
+    .buyurtma-btn .buyurtma_btn__btn {
+        padding: 12px 0px;
+        /* background-color: black; */
+        /* margin-left: 70%; */
+        width: 88%;
+        justify-content: center;
+        display: flex;
+    }
+}

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    root_color: rgb(4, 2, 11);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+.container {
+    /* background-color: black; */
+}
+
+.all {
+    /* height: 3000vh; */
+}
+
+.all .container .block {
+    background-color: white;
+     /* height: 100%; */
+     /* border-top-left-radius: 40px; */
+     /* border-top-right-radius: 40px; */
+}
+
+.all .container .block .block__2 .logo{
+    color: rgb(4, 2, 11);
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.btn_ {
+    width: 97px;
+}
+
+.all .container .block .block__2 .btn-group {
+    margin: 0px 30px;
+    margin-top: 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.all .container .block .block__2 .btn-group::-webkit-scrollbar {
+    display: none;
+}
+
+.all .container .block .block__2 .btn-group button {
+    /* background: transparent; */
+    margin-left: 0px;
+    /* border: none; */
+    border: solid 0px black;
+    cursor: pointer;
+    padding: 7px;
+    font-family: 'Roboto';
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.all .container .block .block__2 .btn-group button:active {
+    background-color: #B7B7B7;   
+}
+.all .container .block .block__2 .btn-group button:hover {
+    background-color: #B7B7B7;
+}
+
+.all .container .block .cards .card{
+    /* border-top: solid 10px  black; */
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 85%;
+    /* margin-top: 20px; */
+    margin: 20px auto;
+}
+
+.all .container .block .cards .category {
+    font-family: 'Roboto';
+    font-size: 37px;;
+    color: rgb(4, 2, 11);
+    margin: 30px;
+}
+
+
+
+.all .container .block .cards .card img {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.all .container .block .cards .card span {
+    color: rgb(4, 2, 11);
+    margin: 15px;
+    font-family: 'Roboto';
+    font-size: 30px;
+}
+
+.all .container .block .cards .card .ctr-price {
+    display: flex;
+    margin: 15px;
+    width: 95%;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.all .container .block .cards .card .ctr-price .cntr {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    height: 20px;
+    align-items: center;
+}
+
+.all .container .block .cards .card .ctr-price .cntr p{
+    font-size: 20px;
+}
+
+.all .container .block .cards .ctr-price .cntr .incr {
+    background-color: #1E201E;
+    border-radius: 7px;
+    padding: 5px;;
+    border: none;
+    color: white;
+    padding: 11px 19px;
+    font-size: 17px;
+    cursor: pointer;
+    /* z-index: 5000; */
+}
+
+.all .container .block .cards .ctr-price .cntr .incr:active {
+    background-color: rgb(4, 2, 11);
+    /* padding: 10.9px 18.9px; */
+}
+
+.all .container .block .cards .ctr-price .cntr .decr {
+    background-color: #1E201E;
+    border: none;
+    /* border-radius: 50px; */
+    border-radius: 7px;
+    color: white;
+    padding: 11px 21px;
+    cursor:pointer;
+    font-size: 17px;
+    /* z-index: 5000; */
+} 
+
+
+.all .container .block .cards .ctr-price .cntr .decr:active {
+    background-color: rgb(4, 2, 11);
+    /* padding: 11px px; */
+}
+
+.all .container .block .cards .card .ctr-price p{
+    color: rgb(4, 2, 11);
+    font-family: 'Roboto';
+}
+
+.all .container .block .cards .card .ctr-price {
+    height: 20px;
+    align-items: center;
+}
+
+
+.all .container .block {
+    /* border: solid 1px black; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* .all .container .block .cards .card .ctr-price .cntr  */
+
+.buyurtma-btn {
+    margin: 0px 0px 15px 0px;
+    position: fixed;
+    width: 25%;
+    justify-content: end;
+    margin-top: 670px;
+}
+
+.buyurtma-btn .buyurtma_btn__btn {
+    background-color: rgb(4, 2, 11);
+    color: white;
+    margin-left: 25px;
+    padding: 12px 34%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 8vh;
+    align-items: center;
+}
+
+.buyurtma-btn .buyurtma_btn__btn:active {
+    background-color: black;
+}
+/* 
+.logo_form{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+} */
+ 
+.logo_form a {
+    margin: 0;
+    padding: 0px;
+}
+/* 
+.logo_form p {
+    /* margin-top: 5px; */
+/* }
+
+.logo_form .phone_number {
+    font-size: 20px;
+} */ */
+
+.logo_form .logo {
+    width: 10px;
+}
+
+.logo_form {
+    display: flex;
+    justify-content: center;
+}
+
+.block .block__2 .lctn_nd_nmbr {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 3vh;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: solid 1px black; */
+}
+
+.lctn_nd_nmbr a {
+    text-decoration: none;
+    color: #0088cc;
+}
+
+.cards {
+    margin-bottom: 70px;
+}
+
+.cards .loading {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
