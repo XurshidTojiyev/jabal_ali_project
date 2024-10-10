@@ -1,7 +1,7 @@
 var hammasi_text ="";
 $(document).ready(function() {
     $.ajax({
-        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=display",
+        url: "https://pink-theodora-56.tiiny.io/api/api.php?action=display",
         type: "GET",
         success: function(data) {
             var output = "";
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 $(".btn-all").click(function() {
     $.ajax({
-        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=display",
+        url: "https://pink-theodora-56.tiiny.io/api/api.php?action=display",
         type: "GET",
         success: function(data) {
             var output = "";
@@ -59,7 +59,7 @@ $(".btn-all").click(function() {
 
 $(".btn_1").click(() => {
     $.ajax({
-        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=sort&category=ichimlik",
+        url: "https://pink-theodora-56.tiiny.io/api/api.php?action=sort&category=ichimlik",
         type: "GET",
         success: function(data) {
             var output = "";
@@ -84,19 +84,19 @@ $(".btn_1").click(() => {
     })
 }) 
 
-document.onclick = (e) => {
-    for(var i = 0;i < e.target.classList.length;i++) {
-        if(e.target.classList[i] == 'incr') {
-            var prntlmnt = e.target.parentElement.parentElement.parentElement;
-            var id = prntlmnt.getAttribute('data-id');
-            var PNextSibling = e.target.previousElementSibling.innerHTML;
-            PNextSibling = parseInt(PNextSibling);
-            PNextSibling = PNextSibling + 1;
-            paragraphTag = e.target.previousElementSibling.innerHTML = `${PNextSibling}`
-            break;
+    document.onclick = (e) => {
+        for(var i = 0;i < e.target.classList.length;i++) {
+            if(e.target.classList[i] == 'incr') {
+                var prntlmnt = e.target.parentElement.parentElement.parentElement;
+                var id = prntlmnt.getAttribute('data-id');
+                var PNextSibling = e.target.previousElementSibling.innerHTML;
+                PNextSibling = parseInt(PNextSibling);
+                PNextSibling = PNextSibling + 1;
+                paragraphTag = e.target.previousElementSibling.innerHTML = `${PNextSibling}`
+                break;
+            }
         }
     }
-}
     $(document.body).click(function(e) {
     for(var i = 0;i < e.target.classList.length;i++) {
         if(e.target.classList[i] == 'decr') {
@@ -112,7 +112,6 @@ document.onclick = (e) => {
 })
 
 $(".buyurtma_btn__btn").click(() => {
-        // var jami = datas[0].count + datas[1].count + datas[2].count;
         var cards = document.querySelectorAll(".card");
         var message = "";
         cards.forEach(element => {
@@ -146,15 +145,13 @@ $(".buyurtma_btn__btn").click(() => {
 })
 
 $(document.body).click((e) => {
-    
     if(e.target.classList[0] == 'img') {
         var target = e.target;
         if(target.getAttribute('src')) {
             $('.popup_img').attr('src', target.getAttribute('src'));
         }
         var description = target.parentElement.getAttribute('id');
-        console.log(description);
-        
+        console.log(description);   
         $('.about_product').html(description);
         $('.popup_span').html(e.target.nextElementSibling);
         $('.d-none').css('display', 'block');
@@ -163,8 +160,6 @@ $(document.body).click((e) => {
         
         
         $('.popup_price').html(chldrn)
-        // $('.popup').css('display', 'block');
-        // $('.popup').css('opacity')
         $('.popup').css('margin-top', `250px`);
         $('.popup').css('margin-left', '30px');;
     }
