@@ -1,7 +1,7 @@
 var hammasi_text ="";
 $(document).ready(function() {
     $.ajax({
-        url: "/backend/api/api.php?action=display",
+        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=display",
         type: "GET",
         success: function(data) {
             var output = "";
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 $(".btn-all").click(function() {
     $.ajax({
-        url: "/backend/api/api.php?action=display",
+        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=display",
         type: "GET",
         success: function(data) {
             var output = "";
@@ -59,7 +59,7 @@ $(".btn-all").click(function() {
 
 $(".btn_1").click(() => {
     $.ajax({
-        url: "/backend/api/api.php?action=sort&category=ichimlik",
+        url: "https://pink-theodora-56.tiiny.io/backend/api/api.php?action=sort&category=ichimlik",
         type: "GET",
         success: function(data) {
             var output = "";
